@@ -23,32 +23,38 @@ var contacts = [
         "firstName": "Kristian",
         "lastName": "Vos",
         "number": "unknown",
-        "likes": ["Javascript", "Gaming", "Foxes"]
+        "likes": ["Javascript", "Gaming", "Foxes"],
+        "dads": "Dracula"
     }
 ];
 
 
 function lookUpProfile(firstName, prop){
 // Only change code below this line
-  var ham =[];
-for (var i=0; i<contacts.length; i++){
+ 
+for (var i=0; i < contacts.length; i++){
   
-  return contacts[i];
-}
+  /* Just for testing! 
+  return contacts[i].prop;}*/
   
-  /* if(contacts[i].hasOwnProperty(firstName))
+  if(contacts[i].firstName === firstName)
   {
-    if(contacts[i].hasOwnProperty(prop)){
-      return contacts[i].prop; 
+    //if(contacts[i].hasOwnProperty(prop)){
+      
+      
+      return contacts[i].hasOwnProperty(prop); 
     }
-    else
+   /* else;
     {return "No such property";  
     }
-   
-  }
+   */
+  
   else
-    {return "No such contact";
-      } */
+    {
+      return "No such contact";
+       }
+}
+
 
   
   // return contacts.length; Just checking my knowledge of arrays
@@ -56,4 +62,4 @@ for (var i=0; i<contacts.length; i++){
 }
 
 // Change these values to test your function
-lookUpProfile("Akira", "likes");
+lookUpProfile("Harry", "likes");
