@@ -24,7 +24,6 @@ var contacts = [
         "lastName": "Vos",
         "number": "unknown",
         "likes": ["Javascript", "Gaming", "Foxes"],
-        "dads": "Dracula"
     }
 ];
 
@@ -32,29 +31,23 @@ var contacts = [
 function lookUpProfile(firstName, prop){
 // Only change code below this line
  
-for (var i=0; i < contacts.length; i++){
-  
-  /* Just for testing! 
-  return contacts[i].prop;}*/
-  
+for (var i=0; i < contacts.length; i++)
+{   
   if(contacts[i].firstName === firstName)
   {
-    //if(contacts[i].hasOwnProperty(prop)){
-      
-      
-      return contacts[i].hasOwnProperty(prop); 
-    }
-   /* else;
-    {return "No such property";  
-    }
-   */
-  
-  else
+    if(contacts[i].hasOwnProperty(prop))
     {
-      return "No such contact";
-       }
+      //if(contacts[i].prop === prop) - Appears not necessary???
+      
+      return contacts[i][prop]; //Working! Use brackets for array lookups;     
+    }
+    else
+    {
+      return "No such property";  
+    }
+  }       
 }
-
+return "No such contact";
 
   
   // return contacts.length; Just checking my knowledge of arrays
