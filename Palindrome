@@ -1,0 +1,14 @@
+function palindrome(str) {
+  // Good luck!
+  
+  
+  lowerCase = str.toLowerCase();
+  array = lowerCase.split('');
+  reverse = array.reverse();
+  joinAgain = array.join("");
+  return joinAgain === lowerCase;
+}
+
+
+
+palindrome("EYEeye");
