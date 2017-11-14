@@ -1,0 +1,23 @@
+
+function titleCase(str) {
+  splitStr = str.split(" ");
+  newArr = [];
+  for(var i=0;i<splitStr.length;i++)
+    {
+      firstLetter = splitStr[i].substring(0,1).toUpperCase();
+      theRest = splitStr[i].substring(1).toLowerCase();
+      console.log(firstLetter);
+      console.log(theRest);
+      titleWord = firstLetter + theRest;
+      console.log(titleWord);
+      newArr.push(titleWord);
+      
+    }
+  title = newArr.join(" ");
+  
+  
+  
+  return title;
+}
+
+titleCase("I'm a little tea pot");
